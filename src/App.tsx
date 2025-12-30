@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import UserDashboard from "./pages/UserDashboard";
@@ -31,30 +31,28 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/dashboard" element={<UserDashboard />} />
-          <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/a-propos" element={<APropos />} />
-          <Route path="/permis/:category" element={<PermisPage />} />
-          <Route path="/tarifs" element={<Tarifs />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/planning" element={<Planning />} />
-          <Route path="/inscription" element={<Inscription />} />
-          <Route path="/cours-en-ligne" element={<CoursEnLigne />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/temoignages" element={<Temoignages />} />
-          <Route path="/conditions-inscription" element={<ConditionsInscription />} />
-          <Route path="/mentions-legales" element={<MentionsLegales />} />
-          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-          <Route path="/reglement-interieur" element={<ReglementInterieur />} />
-          <Route path="/actualites" element={<Actualites />} />
-          <Route path="/galerie" element={<Galerie />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/dashboard" element={<UserDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/a-propos" element={<APropos />} />
+        <Route path="/permis/:category" element={<PermisPage />} />
+        <Route path="/tarifs" element={<Tarifs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/planning" element={<Planning />} />
+        <Route path="/inscription" element={<Inscription />} />
+        <Route path="/cours-en-ligne" element={<CoursEnLigne />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/temoignages" element={<Temoignages />} />
+        <Route path="/conditions-inscription" element={<ConditionsInscription />} />
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/reglement-interieur" element={<ReglementInterieur />} />
+        <Route path="/actualites" element={<Actualites />} />
+        <Route path="/galerie" element={<Galerie />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </TooltipProvider>
   </QueryClientProvider>
 );
